@@ -1,0 +1,37 @@
+@startuml
+Vehiculo --|> Moto
+Vehiculo --|> Autos
+Vehiculo --|> Camioneta
+
+Cliente "1" -- "0..3" Alquiler
+Alquiler "1" o-- "1..*" Vehiculo
+
+Class Cliente{
+-Nombre:
+-Id:
+-Telefono:
+-DNI:
+}
+Class Alquiler { 
+-Codigo: 
+-Fecha lnicio: 
+-Fecha Fin: 
+-Costo Total: 
+-Estado: 
+-Calcular Costo Total: 
+}
+Class Vehiculo{
+-Marca:
+-Modelo: 
+-Placa:
+-Año de fabricacion:
+-Precio Alquiler:
+}
+Class Moto {
+-Cilindrada:
+}
+Class Camioneta {
+-Capacidad De Carga en KG:
+}
+
+@enduml
